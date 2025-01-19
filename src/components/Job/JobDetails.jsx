@@ -12,9 +12,12 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/v1/job/${id}`, {
-        withCredentials: true,
-      })
+      .get(
+        `https://job-portal-mern-backend-hyz7.onrender.com/api/v1/job/${id}`,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         setJob(res.data.job);
       })
